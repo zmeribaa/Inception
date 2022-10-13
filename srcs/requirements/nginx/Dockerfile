@@ -1,13 +1,13 @@
 FROM debian:buster
 
-# RUN apk update && apk upgrade
+RUN apt update && apt upgrade
 
-# RUN apk add nginx
+RUN apt install -y nginx openssl
 
-# RUN nginx -t
+EXPOSE 443
 
-# RUN service nginx start
+COPY ./conf/default /etc/nginx/sites-enabled/default
 
-# COPY /Users/zmeribaa/Desktop/Inception/srcs/requirements/nginx/html /usr/share/nginx/html
+RUN openssl req -newkey rsa:4096 -keyout /etc/ssl/private/zmeribaa.key -out /etc/ssl/certs/zmeribaa.crt
 
 CMD ["nginx", "-g", "daemon off;"]
