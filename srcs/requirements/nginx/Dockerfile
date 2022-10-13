@@ -8,6 +8,6 @@ EXPOSE 443
 
 COPY ./conf/default /etc/nginx/sites-enabled/default
 
-RUN openssl req -newkey rsa:4096 -keyout /etc/ssl/private/zmeribaa.key -out /etc/ssl/certs/zmeribaa.crt
+RUN openssl req -nodes -x509 -days 365 -newkey rsa:4096 -keyout /etc/ssl/private/zmeribaa.key -out /etc/ssl/certs/zmeribaa.crt -subj "/C=MA/ST=Rehamna Province/L=Benguerir/O=1337/CN=zmeribaa.42.fr";
 
 CMD ["nginx", "-g", "daemon off;"]
