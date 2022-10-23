@@ -40,7 +40,7 @@ services:
     depends_on:
       - mariadb
     volumes:
-      - wp:/var/www/hmtl
+      - wp:/var/www/html
     networks:
       - vegeta-network
   

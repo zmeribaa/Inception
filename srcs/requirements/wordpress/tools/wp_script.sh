@@ -4,7 +4,7 @@
 	chown -R www-data:www-data /var/www/*;
 	chown -R 755 /var/www/*;
 	mkdir -p /run/php/;
-	touch /run/php/php7.3-fpm.pid;§
+	touch /run/php/php7.3-fpm.pid;
 
 if [ ! -f /var/html/wp-config.php ]; then
 	mkdir -p /var/www/html
