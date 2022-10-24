@@ -1,5 +1,5 @@
-create database wordpress;
-create user 'zmeribaa'@'%' identified by 'user';
-grant all privileges on wordpress.* to 'zmeribaa'@'%';
+CREATE DATABASE wordpress;
+CREATE user 'zmeribaa'@'%' identified BY 'user';
+GRANT all privileges ON wordpress.* TO 'zmeribaa'@'%';
 flush privileges;
--- alter user 'root'@'localhost' identified by 'root';
+ALTER user 'root'@'localhost' identified BY 'root';
