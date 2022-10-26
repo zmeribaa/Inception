@@ -1,10 +1,10 @@
 FROM debian:buster
 
-RUN apt update && apt -y upgrade
+RUN apt-get update && apt-get -y upgrade
 
-RUN apt install -y vim
+RUN apt-get install -y vim
 
-RUN apt install -y nginx openssl
+RUN apt-get install -y nginx openssl
 
 EXPOSE 443
 

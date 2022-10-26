@@ -1,6 +1,6 @@
 FROM debian:buster
 
-RUN apt-get update && apt -y upgrade 
+RUN apt-get update && apt-get -y upgrade 
 
 RUN apt-get install -y php php-fpm php-mysqli curl sendmail
 
